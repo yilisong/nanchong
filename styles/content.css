@@ -1,0 +1,34 @@
+/*
+des: 主体代码的样式
+*/
+.content {
+    width: 100%;
+}
+
+.content-left {
+    border: 1px solid red;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    width: 25%;
+    height: 32rem;
+    position: absolute;
+}
+
+.content-center {
+    border: 1px solid greenyellow;
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    width: 48%;
+    height: 32rem;
+    margin-left: 26%;
+    position: absolute;
+}
+
+.content-right {
+    border: 1px solid gold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 25%;
+    height: 32rem;
+    margin-left: 75%;
+}

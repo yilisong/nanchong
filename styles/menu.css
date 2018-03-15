@@ -1,3 +1,8 @@
 /*
 des: 菜单样式
 */
+.menu {
+    height: 2rem;
+    width: 100%;
+    border: 1px solid red;
+}
