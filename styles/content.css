@@ -2,33 +2,113 @@
 des: 主体代码的样式
 */
 .content {
-    width: 100%;
+    width: 98%;
+    margin-left: 1%;
+    position:relative;
 }
-
+/*左侧图表信息*/
+.content-left:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    background: -webkit-gradient(linear, left top, right top, from(#00a2ff), to(#03fffc));
+    background: linear-gradient(to right, #00a2ff, #03fffc);
+}
 .content-left {
-    border: 1px solid red;
-    /* margin-top: 20px; */
+    /* border: 1px solid red; */
     margin-bottom: 20px;
     width: 25%;
-    height: 32rem;
+    height: 33rem;
     position: absolute;
+    /* padding-left: 20px; */
+    margin-right: 1%;
+    background: rgba(14, 20, 30, 0.9);
 }
-
+.content-left>div {
+    margin-top: 10px;
+    padding-left: 1%;
+    width: 98%;
+}
+.content-left input {
+    font-size: 14px;
+    padding: 5px 2rem;
+    border-radius: 20px;
+    color: #fff;
+    width: 100%;
+    background: url('../images/search.png') no-repeat 0.5rem 0.2rem;
+    background-color: rgba(31, 39, 59, 0.9);
+}
+.content-left .charts-left {
+    position: absolute;
+    height: 9rem;
+    width: 30%;
+}
+.content-left .charts-right {
+    height: 9rem;
+    width: 70%;
+    margin-left: 30%;
+}
+/*中间图表信息*/
+.content-center:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    background: -webkit-gradient(linear, left top, right top, from(#00a2ff), to(#03fffc));
+    background: linear-gradient(to right, #00a2ff, #03fffc);
+}
+.table:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 20rem;
+    content: '';
+    background: -webkit-gradient(linear, left top, right top, from(#00a2ff), to(#03fffc));
+    background: linear-gradient(to right, #00a2ff, #03fffc);
+}
 .content-center {
-    border: 1px solid greenyellow;
-    /* margin-top: 20px; */
+    /* border: 1px solid greenyellow; */
     margin-bottom: 20px;
     width: 48%;
-    height: 32rem;
+    height: 33rem;
     margin-left: 26%;
     position: absolute;
+    float: left;
 }
 
+/*右侧图表信息*/
+.content-right:before {
+    height: 3px;
+    width: 100%;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    content: '';
+    background: -webkit-gradient(linear, left top, right top, from(#00a2ff), to(#03fffc));
+    background: linear-gradient(to right, #00a2ff, #03fffc);
+}
 .content-right {
-    border: 1px solid gold;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 20px;
     width: 25%;
-    height: 32rem;
-    margin-left: 75%;
+    height: 33rem;
+    /* margin-left: 75%; */
+    float: right;
+    background: rgba(14, 20, 30, 0.9);
+}
+.content-right .charts-left {
+    position: absolute;
+    height: 9rem;
+    width: 30%;
+}
+.content-right .charts-right {
+    height: 9rem;
+    width: 70%;
+    margin-left: 30%;
 }

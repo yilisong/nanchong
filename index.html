@@ -8,22 +8,118 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/content.css">
+    <style>
+        li{
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
     <div>
         <div class="header"></div>
         <div class="menu"></div>
         <div class="content">
-            <div class="content-left">
-
+            <div style="width:100%">
+                <div class="content-left">
+                    <div>
+                        <input type="text" placeholder="搜索姓名、身份证号、电话号码"/>
+                    </div>
+                    <div>
+                        <div>
+                            <span>小区类型</span>
+                            <span>小区总数：3828个</span>
+                        </div>
+                        <div class="charts-left" id="bars1"></div>
+                        <div class="charts-right" id="main"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>房屋数据</span>
+                            <span>房屋总数：3828套 | 入住率： 85%</span>
+                        </div>
+                        <div class="charts-left" id="bars2"></div>
+                        <div class="charts-right" id="line1"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>小区类型</span>
+                            <span>小区总数：3828个</span>
+                        </div>
+                        <div class="charts-left" id="bars3"></div>
+                        <div class="charts-right" id="line2" style="height:10rem;width: 70%"></div>
+                    </div>
+                </div>
+                <div class="content-center">
+                    <div class="mapArea" style="border: 1px solid red;height: 20rem;"></div>
+                    <div class="table" style="border: 1px solid red;height: 13rem;">
+                        <ul id="ulContent">
+                            <li>我是第1行文字</li>
+                            <li>我是第2行文字</li>
+                            <li>我是第3行文字</li>
+                            <li>我是第4行文字</li>
+                            <li>我是第5行文字</li>
+                            <li>我是第6行文字</li>
+                            <li>我是第7行文字</li>
+                            <li>我是第8行文字</li>
+                            <li>我是第9行文字</li>
+                            <li>我是第10行文字</li>
+                            <li>我是第11行文字</li>
+                            <li>我是第12行文字</li>
+                            <li>我是第13行文字</li>
+                            <li>我是第14行文字</li>
+                            <li>我是第15行文字</li>
+                            <li>我是第16行文字</li>
+                            <li>我是第17行文字</li>
+                            <li>我是第18行文字</li>
+                            <li>我是第19行文字</li>
+                            <li>我是第20行文字</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div>
+                        <input type="text" placeholder="搜索姓名、身份证号、电话号码"/>
+                    </div>
+                    <div>
+                        <div>
+                            <span>小区类型</span>
+                            <span>小区总数：3828个</span>
+                        </div>
+                        <div class="charts-left" id="bars1"></div>
+                        <div class="charts-right" id="main"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>房屋数据</span>
+                            <span>房屋总数：3828套 | 入住率： 85%</span>
+                        </div>
+                        <div class="charts-left" id="bars2"></div>
+                        <div class="charts-right" id="line1"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <span>小区类型</span>
+                            <span>小区总数：3828个</span>
+                        </div>
+                        <div class="charts-left" id="bars3"></div>
+                        <div class="charts-right" id="line2" style="height:10rem;width: 70%"></div>
+                    </div>
+                </div>
             </div>
-            <div class="content-center"></div>
-            <div class="content-right"></div>
         </div>
     </div>
     <script src="scripts/jquery-1.11.1.min.js"></script>
     <script src="scripts/echarts.min.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script>
+        $(function(){
+            // <!--获取li每行的高度，动画移动的高度-->
+            var liHeight = $('li').height();
+            // <!--调用插件-->
+            $('#ulContent').lSlide({nTop:liHeight});
+        })
+    </script>
 </body>
 </html>
