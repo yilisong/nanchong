@@ -1,12 +1,29 @@
 /************************** global init **************************/
 
 html {
-    font-size: 14px !important;
+    font-size: 16px !important;
     margin: 0;
     padding: 0;
     height: 100%;
 }
-
+@media screen and (max-height: 795px) {
+    html{
+        font-size: 14px !important;
+        overflow-y: hidden;
+    }
+}
+@media screen and (min-height: 946px) {
+    html{
+        font-size: 17px !important;
+        overflow-y: hidden;
+    }
+}
+@media screen and (min-height: 1070px) {
+    html{
+        font-size: 19px !important;
+        overflow-y: hidden;
+    }
+}
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, button, textarea, p {
     margin: 0;
     padding: 0;

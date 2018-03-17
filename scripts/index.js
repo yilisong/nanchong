@@ -6,9 +6,9 @@ function barMethod(dom, data) {
     tooltip: {},
     grid: {
       show: true,
-      top: 15,
-      left: '8%',
-      right: '7%',
+      top: 25,
+      left: data.left,
+      right: data.right,
       bottom: '30%',
       borderWidth: 0
     },
@@ -68,13 +68,17 @@ function barMethod(dom, data) {
 var myChartCount = {
   xAxis: ['火花街道', '都尉街道', '凤垭街道', '文峰街道', '西兴街道', '南湖街道'],
   title: '街道',
-  data: [12532, 1, 1, 1, 1, 9149]
+  data: [12532, 1, 1, 1, 1, 9149],
+  right: '9%',
+  left: '15%'
 }
 // 特殊人群
 var specialmenList = {
   xAxis: ['重性精神病人', '涉毒人员', '刑释解教人员', '涉稳人员', '独居老人'],
   title: '特殊人群',
-  data: [0, 3, 4, 29, 11]
+  data: [0, 3, 4, 29, 11],
+  right: '5%',
+  left: '8%'
 }
 barMethod(myChart, myChartCount)
 barMethod(specialmen, specialmenList)

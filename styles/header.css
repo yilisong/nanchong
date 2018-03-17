@@ -24,6 +24,17 @@ des: 头部菜单栏上面的样式文件
     line-height: 2.5rem;
     font-size: 2.125rem;
     margin-left: 1.5rem;
+    position: relative;
+}
+.header .navbar .icon-title {
+    float: left;
+    margin-left: 0.8rem;
+}
+.header > .navbar > .icon > img{
+    float: left;
+    vertical-align: middle;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .header > .headline{
     position: relative;
