@@ -9,7 +9,7 @@ function barMethod(dom, data) {
       top: 25,
       left: data.left,
       right: data.right,
-      bottom: '30%',
+      bottom: '35%',
       borderWidth: 0
     },
     xAxis: {
@@ -60,10 +60,6 @@ function barMethod(dom, data) {
   };
   dom.setOption(option)
 }
-
-// 使用刚指定的配置项和数据显示图表。
-// myChart.setOption(option);
-// specialmen.setOption(option);
 // 小区总数
 var myChartCount = {
   xAxis: ['火花街道', '都尉街道', '凤垭街道', '文峰街道', '西兴街道', '南湖街道'],
@@ -89,7 +85,7 @@ var bars3 = echarts.init(document.getElementById('bars3'));
 // 指定图表的配置项和数据
 function optionbarsMethods(dom, data) {
   var optionbars = {
-      color: ['rgb(91, 236, 193)', 'rgb(0, 186, 255)', 'rgb(57, 68, 215)'],
+      color: data.color,
       tooltip: {
         trigger: 'item',
         formatter: "{b}: {c}",
@@ -140,10 +136,10 @@ function optionbarsMethods(dom, data) {
   };
   dom.setOption(optionbars)
 }
-
 // 使用刚指定的配置项和数据显示图表。
 //小区类型数据
 var residential = {
+  color: ['rgb(246, 235, 40)', 'rgb(91, 236, 193)', 'rgb(57, 68, 215)'],
   legend: ['封闭式', '开放式', '混合式'],
   title: '小区类型',
   data: [
@@ -154,6 +150,7 @@ var residential = {
 }
 //房屋数据
 var houseStyle = {
+  color: ['rgb(246, 235, 40)', 'rgb(91, 236, 193)', 'rgb(57, 68, 215)'],
   legend: ['空闲', '出租', '自住'],
   title: '房屋数据',
   data: [
@@ -164,6 +161,7 @@ var houseStyle = {
 }
 //车辆类型数据
 var cars = {
+  color: ['rgb(246, 235, 40)', 'rgb(91, 236, 193)', 'rgb(57, 68, 215)'],
   legend: ['本地', '外地', '其它'],
   title: '车辆数据',
   data: [
@@ -311,21 +309,14 @@ var ageChart = echarts.init(document.getElementById('memberChange'))
 
 var optionBar = {
   color: ['rgb(58, 76, 217)','rgb(0, 183, 252)','rgb(91, 236, 193)'],
-  title: {
-    textStyle: {
-      fontSize: 13,
-      color: '#fff'          // 主标题文字颜色
-    },
-    text: '人口信息',
-    x:'left'
-  },
   tooltip : {
     trigger: 'item',
     formatter: "{a} <br/>{b} : {c} ({d}%)"
   },
   legend: {
-    orient: 'vertical',
-    left: 'right',
+    top: 5,
+    // x: 'center',
+    y: 'bottom',
     data: ['户籍人口','境外人口','流动人口'],
     itemWidth: 5,
     itemHeight: 5,
@@ -336,6 +327,7 @@ var optionBar = {
       fontSize:12
     }
   },
+  calculable: true,
   series : [
     {
       name: '人口',
@@ -358,10 +350,15 @@ var optionBar = {
         }
       },
       itemStyle: {
-        emphasis: {
-          shadowBlur: 10,
-          shadowOffsetX: 0,
-          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        normal: {
+          label: {
+            show: true,
+            position: 'inner',
+            formatter: '{c} ({d}%)'
+          },
+          labelLine: {
+            show: false
+          }
         }
       }
     }
@@ -374,3 +371,139 @@ $('.jiedao>div').click(function(){
   $(this).addClass('active').siblings().removeClass('active')
   $('#' + $(this).attr('name')).show().siblings().hide();
 })
+
+
+var menChange = echarts.init(document.getElementById('menChange'))
+var menChangeLine = {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          type: 'cross',
+          label: {
+            backgroundColor: '#6a7985'
+          },
+          lineStyle: {
+            type: 'dashed'
+          }
+        }
+      },
+      grid: {
+        show: true,
+        top: 5,
+        left: '5%',
+        right: '5%',
+        bottom: '20%',
+        borderWidth: 0
+      },
+      xAxis: [
+        {
+          type: 'category',
+          boundaryGap: false,
+          axisLabel: {
+            color: '#aaa',
+            margin: 5
+          },
+          axisTick: {
+            show: false
+          },
+          axisLine: {
+            show: false,
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color:'#fff',
+              opacity: 0.1
+            }
+          },
+          data: ['1月', '2月', '3月', '4月', '5月',
+            '6月']
+        }
+      ],
+      yAxis: [
+        {
+          axisTick: {
+            show: false
+          },
+          axisLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
+          splitLine: {
+            show: false,
+          },
+          type: 'value'
+        }
+      ],
+      series: [
+        {
+          name: '进入',
+          type: 'line',
+          smooth: true,
+          lineStyle: {
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 1,
+              y2: 0,
+              colorStops: [{
+                offset: 0, color: '#00a2ff' // 0% 处的颜色
+              }, {
+                offset: 1, color: '#03fdfc' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            },
+            width: 2,
+          },
+          areaStyle: {
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [{
+                offset: 0, color: 'rgba(7, 105, 160, 0.5)' // 0% 处的颜色
+              }, {
+                offset: 1, color: 'rgba(7, 105, 160, 0)' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            }
+          },
+          symbol: 'none',
+          data: [120, 132, 101, 134, 90, 230]
+        },
+        {
+          name: '离开',
+          type: 'line',
+          smooth: true,
+          lineStyle: {
+            color: '#fff',
+            width: 2,
+          },
+          areaStyle: {
+            color: {
+              type: 'linear',
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [{
+                offset: 0, color: 'rgba(255, 255, 255, 0.2)' // 0% 处的颜色
+              }, {
+                offset: 1, color: 'rgba(255, 255, 255, 0)' // 100% 处的颜色
+              }],
+              globalCoord: false // 缺省为 false
+            }
+          },
+          symbol: 'none',
+          data: [220, 182, 191, 234, 290, 330]
+        },
+      ],
+      animationDuration: 2000,
+      color: ['#03fdfc' , '#fff']
+}
+menChange.setOption(menChangeLine);

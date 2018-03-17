@@ -188,8 +188,9 @@
                 <div class="content-right">
                     <div class="paddingTop10">
                         <span class="fontTitles">总人口</span>
-                        <span class="float-right">&nbsp;暂住：4899 </span>
-                        <span class="float-right">常驻: 16738 | </span>   
+                        <span class="float-right">&nbsp;流动人口: 234 </span>
+                        <span class="float-right">&nbsp;境外人口: 32 | </span>
+                        <span class="float-right">户籍人口: 335 | </span>   
                     </div>
                     <div class="totalBackground">
                         <span class="totalcount">2</span>
@@ -200,14 +201,23 @@
                         <span class="totalcountunit">位</span>
                     </div>
                     <div>
-                        <div class="chartRight chartRight1" id="memberChange"></div>
+                        <div>
+                            <span class="fontTitles">人口信息</span>
+                            <span class="fontTitles float-right">特殊人群</span>
+                        </div>
+                        <div class="charts-left" id="memberChange"></div>
+                        <div class="charts-right" id="specialmen"></div>
                     </div>
                     <div>
-                        <div class="fontTitles">特殊人群</div>
-                        <div class="chartRight chartRight2" id="specialmen"></div>
+                        <div>
+                            <span class="fontTitles">流动人口</span>
+                            <span class="float-right">进入&nbsp;<span class="runin">-</span></span>
+                            <span class="float-right">离开&nbsp;<span class="runout">-</span>&nbsp;&nbsp;</span>
+                        </div>
+                        <div class="chartRight chartRight2" id="menChange"></div>
                     </div>
                     <div>
-                        <div class="fontTitles">年龄金字塔</div>
+                        <div class="fontTitles">人员年龄结构</div>
                         <canvas id="canvas"></canvas>
                     </div>
                 </div>

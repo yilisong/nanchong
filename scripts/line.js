@@ -6,8 +6,8 @@ function init () {
   stage = new createjs.Stage(canvas);
 //创建一个Shape对象，此处也可以创建文字Text,创建图片Bitmap
 //刷新舞台
-  drawAxis()
   drawValue()
+  drawAxis()
   stage.update();
 }
 
@@ -36,80 +36,80 @@ function drawValue () {
       value: 1,
       man: 1,
       woman: 1,
-      color: "#52DDBE",
-      colorA: "rgba(82, 221, 190, 0.7)"
+      color: "#002AFF",
+      colorA: "rgba(0, 42, 255, 1)"
     },
     {
       label: '10-19',
       value: 2,
       man: 1,
       woman: 1,
-      color: "#16BAE1",
-      colorA: "rgba(22, 186, 225, 0.7)"
+      color: '#2b72f7',
+      colorA: 'rgba(43, 114, 247, 1)'
     },
     {
       label: '20-29',
       value: 5,
       man: 3,
       woman: 2,
-      color: "#6A76F6",
-      colorA: "rgba(106, 118, 246, 0.7)"
+      color: "#68e5fa",
+      colorA: "rgba(104, 229, 250, 1)"
     },
     {
       label: '30-39',
       value: 6,
       man: 3,
       woman: 3,
-      color: "#8991D1",
-      colorA: "rgba(137, 145, 209, 0.7)"
+      color: "#36bfae",
+      colorA: "rgba(54, 191, 174, 1)"
     },
     {
       label: '40-49',
       value: 7,
       man: 5,
       woman: 2,
-      color: "#0060FF",
-      colorA: "rgba(0, 96, 225, 0.7)"
+      color: "#66ffcc",
+      colorA: "rgba(102, 255, 204, 1)"
     },
     {
       label: '50-59',
       value: 8,
       man: 6,
       woman: 3,
-      color: "#975CCD",
-      colorA: "rgba(151, 96, 205, 0.7)"
+      color: "#3cf45b",
+      colorA: "rgba(60, 244, 91, 1)"
     },
     {
       label: '60-69',
       value: 7,
       man: 4,
       woman: 3,
-      color: "#00ADFF",
-      colorA: "rgba(0, 137, 225, 0.7)"
+      color: "#2db34f",
+      colorA: "rgba(45, 179, 79, 1)"
     },
     {
       label: '70-79',
       value: 8,
       man: 4,
       woman: 4,
-      color: "#F9F167",
-      colorA: "rgba(249, 201, 103, 0.7)"
+      color: "#c0ff2d",
+      colorA: "rgba(192, 255, 45, 1)"
     },
     {
       label: '80-89',
       value: 9,
       man: 5,
       woman: 4,
-      color: "#915AC7",
-      colorA: "rgba(145, 90, 199, 0.7)"
+      color: "#f7fa46",
+      colorA: "rgba(247, 250, 70, 1)"
     },
     {
       label: '90以上',
       value: 10,
       man: 6,
       woman: 4,
-      color: "#D53A35",
-      colorA: "rgba(213, 58, 53, 0.7)"
+      color: "#edd727",
+      colorA: "rgba(237, 215, 39, 1)"
     }
   ]
   var barWidth = 8
