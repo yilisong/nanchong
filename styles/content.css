@@ -214,7 +214,7 @@ des: 主体代码的样式
 }
 .totalBackground {
     height: 60px;
-    widows: 98%;
+    width: 98%;
     margin-left: 1%;
     margin-top: 10px;
     background: url('../images/totalbg.png') no-repeat;
@@ -230,6 +230,27 @@ des: 主体代码的样式
 }
 .totalcountunit {
     padding-left: 10%;
+}
+@media screen and (min-width: 1660px) {
+    .totalBackground {
+        height: 60px;
+        width: 98%;
+        margin-left: 1%;
+        margin-top: 10px;
+        background: url('../images/totalbg.png') no-repeat;
+        background-size: 100% 100%;
+        padding-top: 6px;
+    }
+    .totalcount {
+        font-size: 2.5rem;
+        padding-left: 6%;
+    }
+    .totalcount1 {
+        padding-left: 10%;
+    }
+    .totalcountunit {
+        padding-left: 12%;
+    }
 }
 .charts {
     height: 10rem;
