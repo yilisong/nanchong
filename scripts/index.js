@@ -308,7 +308,7 @@ lineMethods(line2, residentialCount)
 var ageChart = echarts.init(document.getElementById('memberChange'))
 
 var optionBar = {
-  color: ['rgb(58, 76, 217)','rgb(0, 183, 252)','rgb(91, 236, 193)'],
+  color: ['rgb(246, 235, 40)', 'rgb(91, 236, 193)', 'rgb(57, 68, 215)'],
   tooltip : {
     trigger: 'item',
     formatter: "{a} <br/>{b} : {c} ({d}%)"

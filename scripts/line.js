@@ -60,32 +60,32 @@ function drawValue () {
       value: 6,
       man: 3,
       woman: 3,
-      color: "#36bfae",
-      colorA: "rgba(54, 191, 174, 1)"
+      color: "#66ffcc",
+      colorA: "rgba(102, 255, 204, 1)"
     },
     {
       label: '40-49',
       value: 7,
       man: 5,
       woman: 2,
-      color: "#66ffcc",
-      colorA: "rgba(102, 255, 204, 1)"
+      color: "#36bfae",
+      colorA: "rgba(54, 191, 174, 1)"
     },
     {
       label: '50-59',
       value: 8,
       man: 6,
       woman: 3,
-      color: "#3cf45b",
-      colorA: "rgba(60, 244, 91, 1)"
+      color: "#2db34f",
+      colorA: "rgba(45, 179, 79, 1)"
     },
     {
       label: '60-69',
       value: 7,
       man: 4,
       woman: 3,
-      color: "#2db34f",
-      colorA: "rgba(45, 179, 79, 1)"
+      color: "#3cf45b",
+      colorA: "rgba(60, 244, 91, 1)"
     },
     {
       label: '70-79',
@@ -100,16 +100,16 @@ function drawValue () {
       value: 9,
       man: 5,
       woman: 4,
-      color: "#f7fa46",
-      colorA: "rgba(247, 250, 70, 1)"
+      color: "#edd727",
+      colorA: "rgba(237, 215, 39, 1)"
     },
     {
       label: '90以上',
       value: 10,
       man: 6,
       woman: 4,
-      color: "#edd727",
-      colorA: "rgba(237, 215, 39, 1)"
+      color: "#f7fa46",
+      colorA: "rgba(247, 250, 70, 1)"
     }
   ]
   var barWidth = 8
