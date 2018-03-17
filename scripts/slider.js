@@ -15,7 +15,7 @@
             // 动画往上移动距离，单位为px
             _self.animate({top:opts.nTop + "px"},function () {
                 // 查到第一个子元素
-                var  item = _self.children('li')[0];
+                var  item = _self.children('div')[0];
                 // 获取第一个元素
                 var  fChild =  $(item).prop('outerHTML');
                // 将第一个节点拼接到最后
@@ -24,7 +24,7 @@
                 $(item).remove();
             });
             _self.animate({top:0+ "px"},0);
-        },1000)
+        },2000)
         // 点击今日中奖名单停止轮播
         _self.on('touchstart',function () {
             clearInterval(timeId);

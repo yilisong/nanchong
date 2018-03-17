@@ -4,5 +4,57 @@ des: 头部菜单栏上面的样式文件
 .header {
     height: 3.5rem;
     width: 100%;
-    /* border: 1px solid blue; */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.header > .navbar{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    display: inline-grid;
+    flex-basis: 0;
+    flex-grow: 1.5;
+    max-width: 100%;
+    padding: .5rem 1rem;
+    vertical-align: middle;
+    background: rgba(26, 33, 55, .8);
+}
+.header > .navbar > .icon{
+    line-height: 2.5rem;
+    font-size: 2.125rem;
+    margin-left: 1.5rem;
+}
+.header > .headline{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    display: inline-grid;
+    flex-basis: 0;
+    flex-grow: 4;
+    max-width: 100%;
+}
+.headline> .headline-lable{
+    text-align: center;
+    line-height: 3.5rem;
+    font-size: 2.125rem;
+}
+
+.header > .retain{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    display: inline-grid;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: .5rem 1rem;
+}
+
+#triangle-topleft { 
+    width: 0; 
+    height: 0; 
+    border-top: 3.5rem solid rgba(26, 33, 55, .8);
+    border-right: 3.5rem solid transparent; 
+    position: absolute;
 }

@@ -2,7 +2,50 @@
 des: 菜单样式
 */
 .menu {
-    height: 2rem;
+    height: 50px;
     width: 100%;
-    /* border: 1px solid red; */
+}
+.menu > ul{
+    background-color: #171D30;
+    padding: 0 2.5rem;
+    font-size: 1.5rem;
+}
+.menu > ul > li {
+    display: inline;
+    width: 133px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+
+}
+.menu > ul > li:hover {
+    color: #2dc7ef;
+    padding-bottom: .5rem;
+    border-bottom-width: 3px;
+    border-style: solid;
+    -webkit-border-image:
+            -webkit-linear-gradient(right, #00a2ff, #03fffc) 1 100%;
+    -moz-border-image:
+            -moz-linear-gradient(right, #00a2ff, #03fffc) 1 100%;
+    -o-border-image:
+            -o-linear-gradient(right, #00a2ff, #03fffc) 1 100%;
+    border-image:
+            linear-gradient(to right, #00a2ff, #03fffc) 0 0 100% 0;
+}
+.menuActive{
+    color: #2dc7ef;
+    padding-bottom: .5rem;
+    border-bottom-width: 3px;
+    border-style: solid;
+    -webkit-border-image:
+            -webkit-linear-gradient(right, #00a2ff, #03fffc) 1 100%;
+    -moz-border-image:
+            -moz-linear-gradient(right, #00a2ff, #03fffc) 1 100%;
+    -o-border-image:
+            -o-linear-gradient(right, #00a2ff, #03fffc) 1 100%;
+    border-image:
+            linear-gradient(to right, #00a2ff, #03fffc) 0 0 100% 0;
+}
+.menu > ul > li:not(:first-child){
+    margin-left: 1.5rem;
 }

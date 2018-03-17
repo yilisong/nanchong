@@ -18,14 +18,12 @@ des: 主体代码的样式
     background: linear-gradient(to right, #00a2ff, #03fffc);
 }
 .content-left {
-    /* border: 1px solid red; */
     margin-bottom: 20px;
     width: 25%;
-    height: 33rem;
+    height: 48rem;
     position: absolute;
-    /* padding-left: 20px; */
     margin-right: 1%;
-    background: rgba(14, 20, 30, 0.9);
+    background: rgba(14, 19, 34, 0.9);
 }
 .content-left>div {
     margin-top: 10px;
@@ -43,11 +41,11 @@ des: 主体代码的样式
 }
 .content-left .charts-left {
     position: absolute;
-    height: 9rem;
+    height: 13rem;
     width: 30%;
 }
 .content-left .charts-right {
-    height: 9rem;
+    height: 13rem;
     width: 70%;
     margin-left: 30%;
 }
@@ -62,26 +60,125 @@ des: 主体代码的样式
     background: -webkit-gradient(linear, left top, right top, from(#00a2ff), to(#03fffc));
     background: linear-gradient(to right, #00a2ff, #03fffc);
 }
-.table:before {
+.tableboder:before {
     height: 3px;
     width: 100%;
     position: absolute;
     left: 0;
-    top: 20rem;
+    top: 33rem;
     content: '';
     background: -webkit-gradient(linear, left top, right top, from(#00a2ff), to(#03fffc));
     background: linear-gradient(to right, #00a2ff, #03fffc);
 }
 .content-center {
-    /* border: 1px solid greenyellow; */
     margin-bottom: 20px;
     width: 48%;
-    height: 33rem;
+    height: 48rem;
     margin-left: 26%;
     position: absolute;
     float: left;
 }
-
+.table {
+    background: rgba(14,19,34,1);
+    box-shadow:0px px 4px rgba(0,0,0,0.68);
+    height: 15rem;
+}
+.tableTitle {
+    display: inline-block;
+    position: relative;
+    margin-left: 1%;
+    width: 98%;
+    background: rgba(102,111,121,.3);
+}
+.titleInfo {
+   color: #2DD5FF;
+}
+.tabtleTitleMes {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:30px;
+    font-size:1rem
+}
+.mapArea {
+    height: 33rem;
+}
+.paddingRem {
+    padding: 0.5rem 0;
+}
+.memberList {
+    position: relative;
+    padding-top: 14px;
+    padding-left: 4%
+}
+.memberName {
+    float: left;
+    margin-top: 10px;
+    margin-left: 2px;
+}
+.memberAddress {
+    width: 80px; 
+    overflow: hidden; 
+    text-overflow:ellipsis; 
+    white-space: nowrap;
+}
+.memberImg {
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    border:1px solid #00E4FF;
+    float:left
+}
+.memberImg img {
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.addressDynamicMonitoring>div, .warningInfoMes>div {
+    line-height: 35px;
+    padding-left: 5px;
+} 
+/* .paddingRem */
+.tableTitle2 {
+    height: 69%;
+    overflow: hidden;
+    background: #212838;
+}
+.tableTitle2 .member div {
+    text-align: center;
+}
+.paddingLeft {
+    padding-left: 1rem;
+}
+.tableTitle>div {
+    float: left;
+    /* border: 1px solid red; */
+    /* padding: 0.5rem 1rem; */
+}
+.tableTitle .member {
+    width: 30%
+}
+.tableTitle .dynamicMonitoring {
+    width: 40%;
+}
+.tableTitle .warning {
+    width: 30%;
+}
+.tableTitle .member>div {
+    height: 72px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tableTitle .dynamicMonitoring>div {
+    height: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tableTitle .warning>div {
+    height: 36px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
 /*右侧图表信息*/
 .content-right:before {
     height: 3px;
@@ -94,21 +191,108 @@ des: 主体代码的样式
     background: linear-gradient(to right, #00a2ff, #03fffc);
 }
 .content-right {
-    /* margin-top: 20px; */
     margin-bottom: 20px;
     width: 25%;
-    height: 33rem;
-    /* margin-left: 75%; */
+    height: 48rem;
     float: right;
-    background: rgba(14, 20, 30, 0.9);
+    background: rgba(14, 19, 34, 0.9);
+}
+.content-right>div {
+    padding-left: 1%;
+    width: 98%;
+    margin-top: 10px;
 }
 .content-right .charts-left {
-    position: absolute;
-    height: 9rem;
+    height: 12rem;
     width: 30%;
+    float: left;
 }
 .content-right .charts-right {
-    height: 9rem;
+    height: 12rem;
     width: 70%;
     margin-left: 30%;
+}
+.totalBackground {
+    height: 60px;
+    widows: 98%;
+    margin-left: 1%;
+    margin-top: 10px;
+    background: url('../images/totalbg.png') no-repeat;
+    background-size: 100% 100%;
+    padding-top: 10px;
+}
+.totalcount {
+    font-size: 3rem;
+    padding-left: 1rem;
+}
+.totalcount1 {
+    padding-left: 8%;
+}
+.totalcountunit {
+    padding-left: 10%;
+}
+.charts {
+    height: 10rem;
+    width: 100%;
+}
+.content-right .chartRight {
+    width: 100%;
+}
+.chartRight1 {
+    height: 10rem;
+}
+.chartRight2 {
+    height: 14rem;
+}
+/**/
+#canvas{
+    width: 100%;
+    height: 15rem;
+}
+
+.fontTitles {
+    font-size: 1rem;
+}
+.paddingTop10 {
+    padding-top: 10px;
+}
+.jiedao {
+    position: absolute;
+}
+.jiedaodot {
+    position: relative;
+}
+.jiedao>div {
+    border: 1px solid #634E04;
+    padding: 3px 5px;
+    background: rgba(99, 78, 4, 0.7);
+    color: #F6EB28;
+    cursor: pointer;
+}
+.jiedaodot>div {
+    float: left;
+}
+#jiedao1 {
+    left: 76%;
+    top: -24rem;
+}
+#jiedao2 {
+    left: 72%;
+    top: -24rem;
+}
+#jiedao3 {
+    left: 74%;
+    top: -24.5rem;
+}
+#jiedao4 {
+    left: 78%;
+    top: -21rem;
+}
+#jiedao5 {
+    left: 70%;
+    top: -27rem;
+}
+#jiedao6 {
+    left: 74%;
+    top: -23.5rem;
 }

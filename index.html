@@ -8,16 +8,36 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/content.css">
-    <style>
-        li{
-            height: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/cicle.css">
 </head>
 <body>
     <div>
-        <div class="header"></div>
-        <div class="menu"></div>
+        <div class="header">
+            <div class="navbar">
+                <div class="icon">
+                    <img src="./images/icon.png" width="35" height="35">
+                    <span class="icon-title">嘉陵公安</span>
+                </div>
+            </div>
+            <div class="headline">
+                <div id="triangle-topleft"></div>
+                <div class="headline-lable">智慧安全小区信息管理平台</div>
+            </div>
+            <div class="retain"></div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li onclick="menuClick(this)" class="menuActive">主页</li>
+                <li onclick="menuClick(this)">人房登记</li>
+                <li onclick="menuClick(this)">人房管理</li>
+                <li onclick="menuClick(this)">视频监控</li>
+                <li onclick="menuClick(this)">研判分析</li>
+                <li onclick="menuClick(this)">统计查询</li>
+                <li onclick="menuClick(this)">运维管理</li>
+                <li onclick="menuClick(this)">车辆管理</li>
+                <li onclick="menuClick(this)">消防管理</li>
+            </ul>
+        </div>
         <div class="content">
             <div style="width:100%">
                 <div class="content-left">
@@ -26,83 +46,169 @@
                     </div>
                     <div>
                         <div>
-                            <span>小区类型</span>
-                            <span>小区总数：3828个</span>
+                            <span class="fontTitles">小区类型</span>
+                            <span class="float-right">小区总数：3828个</span>
                         </div>
                         <div class="charts-left" id="bars1"></div>
                         <div class="charts-right" id="main"></div>
                     </div>
                     <div>
                         <div>
-                            <span>房屋数据</span>
-                            <span>房屋总数：3828套 | 入住率： 85%</span>
+                            <span class="fontTitles">房屋数据</span>
+                            <span class="float-right">房屋总数：7403套 | 入住率： 99.7%</span>
                         </div>
                         <div class="charts-left" id="bars2"></div>
                         <div class="charts-right" id="line1"></div>
                     </div>
                     <div>
                         <div>
-                            <span>小区类型</span>
-                            <span>小区总数：3828个</span>
+                            <span class="fontTitles">车辆数据</span>
+                            <span class="float-right">车辆总数：88个</span>
                         </div>
                         <div class="charts-left" id="bars3"></div>
-                        <div class="charts-right" id="line2" style="height:10rem;width: 70%"></div>
+                        <div class="charts-right" id="line2"></div>
                     </div>
                 </div>
                 <div class="content-center">
-                    <div class="mapArea" style="border: 1px solid red;height: 20rem;"></div>
-                    <div class="table" style="border: 1px solid red;height: 13rem;">
-                        <ul id="ulContent">
-                            <li>我是第1行文字</li>
-                            <li>我是第2行文字</li>
-                            <li>我是第3行文字</li>
-                            <li>我是第4行文字</li>
-                            <li>我是第5行文字</li>
-                            <li>我是第6行文字</li>
-                            <li>我是第7行文字</li>
-                            <li>我是第8行文字</li>
-                            <li>我是第9行文字</li>
-                            <li>我是第10行文字</li>
-                            <li>我是第11行文字</li>
-                            <li>我是第12行文字</li>
-                            <li>我是第13行文字</li>
-                            <li>我是第14行文字</li>
-                            <li>我是第15行文字</li>
-                            <li>我是第16行文字</li>
-                            <li>我是第17行文字</li>
-                            <li>我是第18行文字</li>
-                            <li>我是第19行文字</li>
-                            <li>我是第20行文字</li>
-                        </ul>
+                    <div class="jiedao">
+                        <div class="active" name="jiedao1">火花街道</div>
+                        <div name="jiedao2">都尉街道</div>
+                        <div name="jiedao3">凤垭街道</div>
+                        <div name="jiedao4">文峰街道</div>
+                        <div name="jiedao5">西兴街道</div>
+                        <div name="jiedao6">南湖街道</div>
+                    </div>
+                    <div class="mapArea">
+                        <img src="images/map.png" alt="" style="width:100%;height:100%">
+                    </div>
+                    <div class="jiedaodot">
+                        <div id="jiedao1" class="container jiedao1" title="火花街道">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
+                            <div class="pulse1"></div>
+                        </div>
+                        <div id="jiedao2" class="container jiedao2" title="都尉街道">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
+                            <div class="pulse1"></div>
+                        </div>
+                        <div id="jiedao3" class="container jiedao3" title="凤垭街道">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
+                            <div class="pulse1"></div>
+                        </div>
+                        <div id="jiedao4" class="container jiedao4" title="文峰街道">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
+                            <div class="pulse1"></div>
+                        </div>
+                        <div id="jiedao5" class="container jiedao5" title="西兴街道">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
+                            <div class="pulse1"></div>
+                        </div>
+                        <div id="jiedao6" class="container jiedao6" title="南湖街道">
+                            <div class="dot"></div>
+                            <div class="pulse"></div>
+                            <div class="pulse1"></div>
+                        </div>
+                    </div>
+                    <div class="tableboder">
+                        <div class="table">
+                            <div class="tabtleTitleMes">工作动态</div>
+                            <div class="tableTitle titleInfo paddingRem">
+                                <div class="member paddingLeft">人员变动</div>
+                                <div class="dynamicMonitoring paddingLeft">动态监测</div>
+                                <div class="warning paddingLeft">预警提醒</div>
+                            </div>
+                            <div class="tableTitle tableTitle2">
+                                <div class="member" id="member">
+                                    <div class="memberList">
+                                        <div class="memberImg">
+                                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521192949286&di=de8f0aa6c44edb999dd409a088e1a51b&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F23%2F20150523165343_M2dsr.jpeg" alt="" style="width:100%;height: 100%;border-radius: 50%">
+                                        </div>
+                                        <div class="memberAddress">公安局11栋11楼1106</div>
+                                        <div class="memberName">张三</div>
+                                    </div>
+                                    <div class="memberList">
+                                        <div class="memberImg">
+                                            <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4288931784,3797112443&fm=27&gp=0.jpg" alt="">
+                                        </div>
+                                        <div class="memberAddress">公安局11栋11楼1106</div>
+                                        <div class="memberName">张啦啦</div>
+                                    </div>
+                                    <div class="memberList">
+                                        <div class="memberImg">
+                                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521192949286&di=de8f0aa6c44edb999dd409a088e1a51b&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F23%2F20150523165343_M2dsr.jpeg" alt="" style="width:100%;height: 100%;border-radius: 50%">
+                                        </div>
+                                        <div class="memberAddress">公安局11栋11楼1106</div>
+                                        <div class="memberName">李四</div>
+                                    </div>
+                                    <div class="memberList">
+                                        <div class="memberImg">
+                                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521192949286&di=de8f0aa6c44edb999dd409a088e1a51b&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201505%2F23%2F20150523165343_M2dsr.jpeg" alt="" style="width:100%;height: 100%;border-radius: 50%">
+                                        </div>
+                                        <div class="memberAddress">公安局11栋11楼1106</div>
+                                        <div class="memberName">李荣</div>
+                                    </div>
+                                </div>
+                                <div class="dynamicMonitoring addressDynamicMonitoring" id="dynamicMonitoring">
+                                    <div>规划院1楼1单元规划院3楼1单元</div>
+                                    <div>规划院2楼1单元规划院3楼1单元</div>
+                                    <div>规划院3楼1单元规划院3楼1单元</div>
+                                    <div>规划院3楼1单元规划院3楼1单元</div>
+                                    <div>规划院4楼1单元规划院3楼1单元</div>
+                                </div>
+                                <div class="warning warningInfoMes" id="warning">
+                                    <div>我是第1行文字</div>
+                                    <div>我是第2行文字</div>
+                                    <div>我是第3行文字</div>
+                                    <div>我是第4行文字</div>
+                                    <div>我是第5行文字</div>
+                                    <div>我是第6行文字</div>
+                                    <div>我是第7行文字</div>
+                                    <div>我是第8行文字</div>
+                                    <div>我是第9行文字</div>
+                                    <div>我是第10行文字</div>
+                                    <div>我是第11行文字</div>
+                                    <div>我是第12行文字</div>
+                                    <div>我是第13行文字</div>
+                                    <div>我是第14行文字</div>
+                                    <div>我是第15行文字</div>
+                                    <div>我是第16行文字</div>
+                                    <div>我是第17行文字</div>
+                                    <div>我是第18行文字</div>
+                                    <div>我是第19行文字</div>
+                                    <div>我是第20行文字</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="content-right">
-                    <div>
-                        <input type="text" placeholder="搜索姓名、身份证号、电话号码"/>
+                    <div class="paddingTop10">
+                        <span class="fontTitles">总人口</span>
+                        <span class="float-right">&nbsp;暂住：4899 </span>
+                        <span class="float-right">常驻: 16738 | </span>   
+                    </div>
+                    <div class="totalBackground">
+                        <span class="totalcount">2</span>
+                        <span class="totalcount totalcount1">1</span>
+                        <span class="totalcount totalcount1">6</span>
+                        <span class="totalcount totalcount1">8</span>
+                        <span class="totalcount totalcount1">1</span>
+                        <span class="totalcountunit">位</span>
                     </div>
                     <div>
-                        <div>
-                            <span>小区类型</span>
-                            <span>小区总数：3828个</span>
-                        </div>
-                        <div class="charts-left" id="bars1"></div>
-                        <div class="charts-right" id="main"></div>
+                        <div class="chartRight chartRight1" id="memberChange"></div>
                     </div>
                     <div>
-                        <div>
-                            <span>房屋数据</span>
-                            <span>房屋总数：3828套 | 入住率： 85%</span>
-                        </div>
-                        <div class="charts-left" id="bars2"></div>
-                        <div class="charts-right" id="line1"></div>
+                        <div class="fontTitles">特殊人群</div>
+                        <div class="chartRight chartRight2" id="specialmen"></div>
                     </div>
                     <div>
-                        <div>
-                            <span>小区类型</span>
-                            <span>小区总数：3828个</span>
-                        </div>
-                        <div class="charts-left" id="bars3"></div>
-                        <div class="charts-right" id="line2" style="height:10rem;width: 70%"></div>
+                        <div class="fontTitles">年龄金字塔</div>
+                        <canvas id="canvas"></canvas>
                     </div>
                 </div>
             </div>
@@ -110,15 +216,22 @@
     </div>
     <script src="scripts/jquery-1.11.1.min.js"></script>
     <script src="scripts/echarts.min.js"></script>
+    <script src="scripts/createjs.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/slider.js"></script>
+    <script src="scripts/line.js"></script>
     <script>
         $(function(){
             // <!--获取li每行的高度，动画移动的高度-->
-            var liHeight = $('li').height();
+            var member = $('#member div').height();
+            var dynamicMonitoring = $('#dynamicMonitoring div').height();
+            var warning = $('#warning div').height();
             // <!--调用插件-->
-            $('#ulContent').lSlide({nTop:liHeight});
+            $('#member').lSlide({nTop:member});
+            $('#dynamicMonitoring').lSlide({nTop:dynamicMonitoring});
+            $('#warning').lSlide({nTop:dynamicMonitoring});
+            init()
         })
     </script>
 </body>
