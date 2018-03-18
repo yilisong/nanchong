@@ -105,6 +105,12 @@ var specialOption = {
           color: 'rgba(255, 255, 255, .1)'
         }
       },
+      axisLabel: {
+        rotate:-40,
+        textStyle: {
+          color: '#999'
+        }
+      },
       type: 'value'
     }
   ],
@@ -199,11 +205,11 @@ function optionbarsMethods(dom, data) {
 //小区类型数据
 var residential = {
   color: ['rgb(246, 235, 40)', 'rgb(91, 236, 193)', 'rgb(57, 68, 215)'],
-  legend: ['封闭式', '开放式', '混合式'],
+  legend: ['开放式', '封闭式', '混合式'],
   title: '小区类型',
   data: [
-    {value:0, name:'封闭式'},
-    {value:44, name:'开放式'},
+    {value:0, name:'开放式'},
+    {value:34, name:'封闭式'},
     {value:1, name:'混合式'}
   ]
 }
@@ -224,9 +230,9 @@ var cars = {
   legend: ['本地', '外地', '其它'],
   title: '车辆数据',
   data: [
-    {value: 80, name:'本地'},
-    {value: 3, name:'外地'},
-    {value: 5, name:'其它'}
+    {value: 3651, name:'本地'},
+    {value: 300, name:'外地'},
+    {value: 105, name:'其它'}
   ]
 }
 optionbarsMethods(bars1, residential)
