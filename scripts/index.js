@@ -474,7 +474,7 @@ var menChangeLine = {
             }
           },
           symbol: 'none',
-          data: [120, 132, 101, 134, 90, 230]
+          data: [220, 182, 191, 234, 290, 330]
         },
         {
           name: '离开',
@@ -500,7 +500,7 @@ var menChangeLine = {
             }
           },
           symbol: 'none',
-          data: [220, 182, 191, 234, 290, 330]
+          data: [120, 132, 101, 134, 90, 230]
         },
       ],
       animationDuration: 2000,
