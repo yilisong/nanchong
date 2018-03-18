@@ -321,6 +321,10 @@ des: 主体代码的样式
         cursor: pointer;
         float: left;
     }
+    .totalcountunit {
+        padding-left: 13%;
+        font-size: 1rem;
+    }
 }
 @media screen and (min-width: 1439px) {
     .totalBackground {
@@ -341,6 +345,7 @@ des: 主体代码的样式
     }
     .totalcountunit {
         padding-left: 12%;
+        font-size: 1rem;
     }
     .memberAddress {
         width: 90px;
