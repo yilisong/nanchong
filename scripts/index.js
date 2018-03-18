@@ -64,20 +64,79 @@ function barMethod(dom, data) {
 var myChartCount = {
   xAxis: ['火花街道', '都尉街道', '凤垭街道', '文峰街道', '西兴街道', '南湖街道'],
   title: '街道',
-  data: [12532, 1, 1, 1, 1, 9149],
+  data: [23, 0, 0, 0, 0, 12],
   right: '9%',
   left: '15%'
 }
 // 特殊人群
-var specialmenList = {
-  xAxis: ['重性精神病人', '涉毒人员', '刑释解教人员', '涉稳人员', '独居老人'],
-  title: '特殊人群',
-  data: [0, 3, 4, 29, 11],
-  right: '5%',
-  left: '8%'
-}
 barMethod(myChart, myChartCount)
-barMethod(specialmen, specialmenList)
+
+var specialOption = {
+  color: ['#002AFF', '#2b72f7', '#edd727', '#68e5fa', '#3cf45b'],
+  grid: {
+    show: true,
+    top: 25,
+    left: '22%',
+    right: '5%',
+    bottom: '35%',
+    borderWidth: 0
+  },
+  xAxis: [
+    {
+      axisTick: {show: false},
+      splitLine:{show: false},
+      type: "category",
+      axisLabel: {
+        interval: 0,
+        rotate:-40,//-30度角倾斜显示
+        textStyle: {
+          color: '#fff'
+        }
+      },
+      data: ['重性精神病人', '涉毒人员', '刑释解教人员', '涉稳人员', '独居老人']
+    }
+  ],
+  yAxis: [
+    {
+      splitLine:{
+        show: true,
+        lineStyle: {
+          // 使用深浅的间隔色
+          color: 'rgba(255, 255, 255, .1)'
+        }
+      },
+      type: 'value'
+    }
+  ],
+  series: [
+    {
+      name: '重性精神病人',
+      type: 'bar',
+      data: [0, 0, 0, 0, 0]
+    },
+    {
+      name: '涉毒人员',
+      type: 'bar',
+      data: [0, 3, 0, 0, 0]
+    },
+    {
+      name: '刑释解教人员',
+      type: 'bar',
+      data: [0, 0, 4, 0, 0]
+    },
+    {
+      name: '涉稳人员',
+      type: 'bar',
+      data: [0, 0, 0, 29, 0]
+    },
+    {
+      name: '独居老人',
+      type: 'bar',
+      data: [0, 0, , 0, 11]
+    }
+  ]
+}
+specialmen.setOption(specialOption)
 
 var bars1 = echarts.init(document.getElementById('bars1'));
 var bars2 = echarts.init(document.getElementById('bars2'));
@@ -288,7 +347,7 @@ function lineMethods(dom, data) {
     animationDuration: 2000,
     color: ['#03fdfc' , '#fff']
   }
-  dom.setOption(optionLine)
+  dom.setOption(optionLine, true)
 }
 // 房屋数量
 var houseCount = {
@@ -335,9 +394,9 @@ var optionBar = {
       radius : '55%',
       center: ['50%', '60%'],
       data:[
-        {value:335, name:'户籍人口'},
-        {value:32, name:'境外人口'},
-        {value:234, name:'流动人口'}
+        {value:16798, name:'户籍人口'},
+        {value:13, name:'境外人口'},
+        {value:4952, name:'流动人口'}
       ],
       labelLine: {
         normal: {
@@ -507,3 +566,81 @@ var menChangeLine = {
       color: ['#03fdfc' , '#fff']
 }
 menChange.setOption(menChangeLine);
+
+var canvasChart = echarts.init(document.getElementById('canvas'))
+var canvasOptions = {
+  tooltip: {
+    trigger: 'item',
+    formatter:function(a){
+      console.log(a)
+      return (
+        a['data']['name']+":"+a['data']['value']+"("+a['percent']*2+"%)"
+      )
+    },
+    position: ['10%', '50%']
+  },
+  color: ["#0696ff","#7ed321","#ffc31a", "transparent"],
+  startAngle: 180,
+  series: [
+    {
+      name:'',
+      type:'pie',
+      radius: ['45%', '90%'],
+      avoidLabelOverlap: false,
+      startAngle: 180,
+      center:["50%","70%"],
+      //stillShowZeroSum:0,
+      label: {
+
+        normal: {
+          position: 'inner',
+          textStyle: {
+            color: '#fff',
+            fontSize: 12
+          }
+        },
+        emphasis: {
+          show: true,
+          textStyle: {
+            fontSize: '12',
+            fontWeight: 'bold'
+          }
+        }
+      },
+      labelLine: {
+        normal: {
+          show: false
+        }
+      },
+      data:[
+        {value:2025, name:'<16'},
+        {value:15492, name:'16~60'},
+        {value:4258, name:'>60'},
+        {value:21775, name:'',tooltip:{formatter:function(a){return ""}}}
+      ]
+    }
+  ]
+}
+canvasChart.setOption(canvasOptions)
+window.setInterval(function(){
+    line1.clear();
+    line2.clear();
+    menChange.clear();
+    myChart.clear();
+    specialmen.clear();
+    ageChart.clear();
+    bars1.clear();
+    bars2.clear();
+    bars3.clear();
+    canvasChart.clear()
+    canvasChart.setOption(canvasOptions)
+    optionbarsMethods(bars1, residential)
+    optionbarsMethods(bars2, houseStyle)
+    optionbarsMethods(bars3, cars)
+    ageChart.setOption(optionBar)
+    barMethod(myChart, myChartCount)
+    specialmen.setOption(specialOption)
+    lineMethods(line1, houseCount)
+    lineMethods(line2, residentialCount)
+    menChange.setOption(menChangeLine);
+  }, 3000);

@@ -107,7 +107,7 @@ des: 主体代码的样式
 }
 .memberList {
     position: relative;
-    padding-top: 14px;
+    padding-top: 4px;
     padding-left: 4%
 }
 .memberName {
@@ -122,8 +122,8 @@ des: 主体代码的样式
     white-space: nowrap;
 }
 .memberImg {
-    width:43px;
-    height:43px;
+    width:45px;
+    height:45px;
     border-radius:50%;
     border:1px solid #00E4FF;
     float:left
@@ -171,11 +171,19 @@ des: 主体代码的样式
 }
 .tableTitle .dynamicMonitoring>div {
     height: 36px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 .tableTitle .warning>div {
     height: 36px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -231,48 +239,6 @@ des: 主体代码的样式
 .totalcountunit {
     padding-left: 10%;
 }
-@media screen and (min-width: 1439px) {
-    .totalBackground {
-        height: 60px;
-        width: 98%;
-        margin-left: 1%;
-        margin-top: 10px;
-        background: url('../images/totalbg.png') no-repeat;
-        background-size: 100% 100%;
-        padding-top: 6px;
-    }
-    .totalcount {
-        font-size: 3rem;
-        padding-left: 6%;
-    }
-    .totalcount1 {
-        padding-left: 6%;
-    }
-    .totalcountunit {
-        padding-left: 12%;
-    }
-}
-@media screen and (min-width: 1660px) {
-    .totalBackground {
-        height: 60px;
-        width: 98%;
-        margin-left: 1%;
-        margin-top: 10px;
-        background: url('../images/totalbg.png') no-repeat;
-        background-size: 100% 100%;
-        padding-top: 6px;
-    }
-    .totalcount {
-        font-size: 2.5rem;
-        padding-left: 6%;
-    }
-    .totalcount1 {
-        padding-left: 10%;
-    }
-    .totalcountunit {
-        padding-left: 12%;
-    }
-}
 .charts {
     height: 10rem;
     width: 100%;
@@ -300,47 +266,155 @@ des: 主体代码的样式
 }
 .jiedao {
     position: absolute;
+    margin-top: 31rem;
 }
 .jiedaodot {
     position: relative;
 }
 .jiedao>div {
     border: 1px solid #634E04;
-    padding: 1rem 3rem;
+    padding: 0.5rem 0.8rem;
     background: rgba(99, 78, 4, 0.7);
     color: #F6EB28;
     cursor: pointer;
+    float: left;
 }
 .jiedaodot>div {
     float: left;
 }
 #jiedao1 {
-    left: 76%;
-    top: -24rem;
+    left: 54%;
+    top: -30rem;
 }
 #jiedao2 {
-    left: 72%;
-    top: -24rem;
+    left: 54%;
+    top: -28rem;
 }
 #jiedao3 {
-    left: 74%;
-    top: -24.5rem;
+    left: 55%;
+    top: -28.5rem;
 }
 #jiedao4 {
-    left: 78%;
-    top: -21rem;
+    left: 59%;
+    top: -27.5rem;
 }
 #jiedao5 {
-    left: 70%;
-    top: -27rem;
+    left: 45%;
+    top: -30rem;
 }
 #jiedao6 {
-    left: 74%;
-    top: -23.5rem;
+    left: 56%;
+    top: -28.5rem;
 }
 .runin {
     color: #03fdfc;
 }
 .runout {
     color: #fff;
+}
+@media screen and (min-width: 1359px) {
+    .jiedao>div {
+        border: 1px solid #634E04;
+        padding: 0.4rem 0.5rem;
+        background: rgba(99, 78, 4, 0.7);
+        color: #F6EB28;
+        cursor: pointer;
+        float: left;
+    }
+}
+@media screen and (min-width: 1439px) {
+    .totalBackground {
+        height: 60px;
+        width: 98%;
+        margin-left: 1%;
+        margin-top: 10px;
+        background: url('../images/totalbg.png') no-repeat;
+        background-size: 100% 100%;
+        padding-top: 6px;
+    }
+    .totalcount {
+        font-size: 3rem;
+        padding-left: 6%;
+    }
+    .totalcount1 {
+        padding-left: 6%;
+    }
+    .totalcountunit {
+        padding-left: 12%;
+    }
+    .memberAddress {
+        width: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+@media screen and (min-width: 1660px) {
+    .totalBackground {
+        height: 60px;
+        width: 98%;
+        margin-left: 1%;
+        margin-top: 10px;
+        background: url('../images/totalbg.png') no-repeat;
+        background-size: 100% 100%;
+        padding-top: 6px;
+    }
+    .totalcount {
+        font-size: 2.5rem;
+        padding-left: 6%;
+    }
+    .totalcount1 {
+        padding-left: 10%;
+    }
+    .totalcountunit {
+        padding-left: 12%;
+    }
+    .memberImg {
+        width: 4rem;
+        height: 4rem;
+        border-radius:50%;
+        border:1px solid #00E4FF;
+        float:left
+    }
+    .memberList {
+        position: relative;
+        padding-top: 0.5rem;
+        padding-left: 4%;
+    }
+    .memberAddress {
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 0.8rem;
+    }
+    .memberName {
+        float: left;
+        margin-top: 1.3rem;
+        margin-left: 1.4rem;
+    }
+    .tableTitle .member>div {
+        height: 5.1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .tableTitle .dynamicMonitoring>div {
+        height: 2.55rem;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .tableTitle .warning>div {
+        height: 2.55rem;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
 }
