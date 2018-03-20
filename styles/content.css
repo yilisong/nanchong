@@ -21,8 +21,8 @@ des: 主体代码的样式
     margin-bottom: 20px;
     width: 25%;
     height: 48rem;
-    position: absolute;
-    margin-right: 1%;
+    float: right;
+    position: relative;
     background: rgba(14, 19, 34, 0.9);
 }
 .content-left>div {
@@ -202,7 +202,8 @@ des: 主体代码的样式
     margin-bottom: 20px;
     width: 25%;
     height: 48rem;
-    float: right;
+    position: absolute;
+    margin-right: 1%;
     background: rgba(14, 19, 34, 0.9);
 }
 .content-right>div {

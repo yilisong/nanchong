@@ -25,7 +25,7 @@
             });
             _self.animate({top:0+ "px"},0);
         },2000)
-        // 点击今日中奖名单停止轮播
+        // 
         _self.on('touchstart',function () {
             clearInterval(timeId);
         })
